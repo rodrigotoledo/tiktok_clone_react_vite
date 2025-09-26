@@ -33,7 +33,7 @@ function SignUp({ setIsAuthenticated }) {
       setError('')
       navigate('/posts')
     } catch (err) {
-      setError(err.response?.data?.error || 'Login failed: check your credentials and try again.')
+      setError(err.response?.data?.error || 'Sign up failed: please try again.')
       setNotice('')
     }
   }
