@@ -13,7 +13,7 @@ const SignOut = ({ setIsAuthenticated }) => {
   }, [navigate, setIsAuthenticated]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-200 w-full">
+    <div className="min-w-1/3 min-h-screen flex flex-col items-center justify-center bg-gray-200 w-full">
       <p>Signing out...</p>
     </div>
   );

@@ -5,6 +5,7 @@ import SignUp from '../pages/SignUp';
 import ForgotPassword from '../pages/ForgotPassword';
 import NotFound from '../pages/NotFound';
 import UnauthenticatedLayout from '../layouts/UnauthenticatedLayout';
+import ResetPassword from '../pages/ResetPassword';
 
 
 const UnauthenticatedStack = ({ setIsAuthenticated }) => (
@@ -13,6 +14,7 @@ const UnauthenticatedStack = ({ setIsAuthenticated }) => (
       <Route path="/" element={<SignIn setIsAuthenticated={setIsAuthenticated} />} />
       <Route path="/sign-up" element={<SignUp setIsAuthenticated={setIsAuthenticated} />} />
       <Route path="/forgot-password" element={<ForgotPassword setIsAuthenticated={setIsAuthenticated} />} />
+      <Route path="/passwords/:token/edit" element={<ResetPassword setIsAuthenticated={setIsAuthenticated} />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>
