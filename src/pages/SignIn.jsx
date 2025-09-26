@@ -41,7 +41,7 @@ function SignIn({ setIsAuthenticated }) {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
+    <div className="min-w-1/3 max-w-md mx-auto bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
       <h1 className="text-3xl font-bold text-center text-white mb-6">Sign In</h1>
       {error && <div className="mb-4 text-red-400">{error}</div>}
       {notice && <div className="mb-4 text-green-400">{notice}</div>}
@@ -86,7 +86,10 @@ function SignIn({ setIsAuthenticated }) {
           Sign In
         </button>
       </div>
-      <div className="mt-4 text-center">
+      <div className="mt-4 text-center flex justify-between">
+        <Link to="/sign-up" className="text-fuchsia-400 hover:underline">
+          Sign Up
+        </Link>
         <Link to="/forgot-password" className="text-fuchsia-400 hover:underline">
           Forgot password?
         </Link>
