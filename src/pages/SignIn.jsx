@@ -28,6 +28,7 @@ function SignIn({ setIsAuthenticated }) {
       const { data } = await axios.post('/session', payload)
       
       localStorage.setItem('authToken', data.token);
+      localStorage.setItem('email_address', data.user.email_address);
       setIsAuthenticated(true);
       
       setNotice('Signed in successfully')
@@ -40,7 +41,7 @@ function SignIn({ setIsAuthenticated }) {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
+    <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
       <h1 className="text-3xl font-bold text-center text-white mb-6">Sign In</h1>
       {error && <div className="mb-4 text-red-400">{error}</div>}
       {notice && <div className="mb-4 text-green-400">{notice}</div>}
@@ -86,7 +87,7 @@ function SignIn({ setIsAuthenticated }) {
         </button>
       </div>
       <div className="mt-4 text-center">
-        <Link to="/passwords" className="text-fuchsia-400 hover:underline">
+        <Link to="/forgot-password" className="text-fuchsia-400 hover:underline">
           Forgot password?
         </Link>
       </div>

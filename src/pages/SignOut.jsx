@@ -7,6 +7,7 @@ const SignOut = ({ setIsAuthenticated }) => {
   useEffect(() => {
     // access api to sign out
     localStorage.removeItem('authToken');
+    localStorage.removeItem('email_address');
     setIsAuthenticated(false);
     navigate('/');
   }, [navigate, setIsAuthenticated]);

@@ -4,9 +4,9 @@ import Footer from '../components/Footer'
 
 function AuthenticatedLayout() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className="container mx-auto px-4 py-8 flex-1">
+      <main className="container mx-auto flex-1">
         <Outlet />
       </main>
       <Footer />

@@ -2,10 +2,8 @@ import { Outlet } from 'react-router-dom'
 
 function UnauthenticatedLayout() {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center">
-      <div className="w-full max-w-md">
-        <Outlet />
-      </div>
+    <div className='min-h-screen flex-col justify-center items-center flex flex-1'>
+      <Outlet />
     </div>
   )
 }

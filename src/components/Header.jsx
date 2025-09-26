@@ -1,22 +1,14 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      padding: '1rem 2rem',
-      background: '#fff',
-      borderBottom: '1px solid #eee'
-    }}>
-      <div style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#111' }}>
-        TikTok Clone
+    <header className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-black via-fuchsia-700 to-red-600">
+      <div className="flex items-center space-x-2">
+        <span className="text-2xl font-bold text-white">TikTokClone</span>
       </div>
-      <nav>
-        <a href="/" style={{ marginRight: '1rem', color: '#111', textDecoration: 'none' }}>Home</a>
-        <a href="/explore" style={{ marginRight: '1rem', color: '#111', textDecoration: 'none' }}>Explore</a>
-        <a href="/profile" style={{ color: '#111', textDecoration: 'none' }}>Profile</a>
+      <nav className="flex items-center space-x-4">
+        <Link to="/" className="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700">Posts</Link>
+        <Link to="/sign-out" className="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700">Sign Out</Link>
       </nav>
     </header>
   );
