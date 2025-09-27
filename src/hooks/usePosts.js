@@ -8,6 +8,9 @@ export const usePosts = () => {
       const response = await axios.get('/posts');
       return response.data;
     },
-    keepPreviousData: true
+    keepPreviousData: true,
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    refetchInterval: 20000
   });
 };
