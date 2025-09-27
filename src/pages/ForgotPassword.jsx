@@ -33,7 +33,7 @@ function ForgotPassword({ setIsAuthenticated }) {
   }
 
   return (
-    <div className="min-w-1/3 max-w-md mx-auto mt-10 bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
+    <div className="min-w-1/3 max-w-md mx-auto bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
       <h1 className="text-3xl font-bold text-center text-white mb-6">Forgot Password?!</h1>
 
       {error && <div className="mb-4 text-red-400">{error}</div>}
@@ -65,17 +65,12 @@ function ForgotPassword({ setIsAuthenticated }) {
         </button>
       </div>
 
-      <div className="mt-4 text-center flex justify-between">
-        <div className='flex justify-between space-x-4'>
-          <Link to="/" className="text-fuchsia-400 hover:underline">
-            Sign In
-          </Link>
-          <Link to="/sign-up" className="text-fuchsia-400 hover:underline">
-            Sign Up
-          </Link>
-        </div>
-        <Link to="/forgot-password" className="text-fuchsia-400 hover:underline">
-          Forgot password?
+      <div className="mt-4 text-center flex space-x-4">
+        <Link to="/" className="text-fuchsia-400 hover:underline">
+          Sign In
+        </Link>
+        <Link to="/sign-up" className="text-fuchsia-400 hover:underline">
+          Sign Up
         </Link>
       </div>
     </div>

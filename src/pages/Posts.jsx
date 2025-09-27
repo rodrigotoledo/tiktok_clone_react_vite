@@ -14,7 +14,7 @@ const Posts = () => {
   if (isError) return <div className="p-4 text-red-500">Error loading posts</div>;
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-black mt-8 mb-20">
+    <div className="flex flex-col items-center min-h-screen bg-black my-20">
       <h1 className="text-4xl font-extrabold text-white mb-8 tracking-tight">
         TikTok Feed
       </h1>
