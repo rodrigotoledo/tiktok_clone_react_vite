@@ -39,7 +39,7 @@ function SignUp({ setIsAuthenticated }) {
   }
 
   return (
-    <div className="min-w-1/3 max-w-md mx-auto mt-10 bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
+    <div className="min-w-1/3 max-w-md mx-auto bg-gray-900 rounded-xl shadow-lg p-8 border border-fuchsia-700">
       <h1 className="text-3xl font-bold text-center text-white mb-6">Sign Up</h1>
 
       {error && <div className="mb-4 text-red-400">{error}</div>}
