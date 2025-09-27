@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import './index.css'
 import App from './App.jsx'
-// import { UserProvider } from './context/UserContext.jsx'
+import { PostProvider } from './context/PostsContext'
 
 const queryClient = new QueryClient()
 
@@ -14,7 +14,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <PostProvider>
+          <App />
+        </PostProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </BrowserRouter>
