@@ -26,7 +26,7 @@ function SignUp({ setIsAuthenticated }) {
     try {
       const { data } = await axios.post('/registration', payload)
       localStorage.setItem('authToken', data.token);
-      localStorage.setItem('email_address', data.user.email_address);
+      localStorage.setItem('email_address', data.email_address);
       setIsAuthenticated(true);
       
       setNotice('Signed in successfully')
@@ -47,7 +47,7 @@ function SignUp({ setIsAuthenticated }) {
 
       <div className="mb-4">
         <label htmlFor="email_address" className="block text-white mb-2">
-          Email Address
+          Email
         </label>
         <input
           type="email"
@@ -79,7 +79,7 @@ function SignUp({ setIsAuthenticated }) {
       </div>
       <div className="mb-6">
         <label htmlFor="password_confirmation" className="block text-white mb-2">
-          Password Confirmation
+          Password confirmation
         </label>
         <input
           type="password"

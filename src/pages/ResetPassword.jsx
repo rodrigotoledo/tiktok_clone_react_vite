@@ -25,14 +25,11 @@ function ResetPassword() {
       token: token
     }
     try {
-      console.log('Sending PUT to', `${import.meta.env.VITE_API_BASE_URL}/passwords/${token}`, 'with:', payload)
-      const { data, status } = await api.put(`/passwords/${token}`, payload)
-      console.log('Response:', { status, data })
+      await api.put(`/passwords/${token}`, payload)
       setNotice('Password updated successfully... Redirecting to sign in.')
       setError('')
       setTimeout(() => navigate('/'), 1000) // Redirect to login after 2s
     } catch (err) {
-      console.error('Axios error:', err.response?.data, err.message)
       setError(err.response?.data?.error || `Password update failed: ${err.message}`)
       setNotice('')
     }

@@ -44,16 +44,21 @@ const Posts = () => {
               {post.media_file && (
                 <div className="flex justify-center mb-4">
                   {post.media_type === "image" && (
-                    <img
-                      src={post.media_file}
-                      alt="post"
-                      className="rounded-lg"
-                    />
+                    <div className="photo-post">
+                      <img
+                        src={post.media_file}
+                        alt="post"
+                        className="img-fluid"
+                      />
+                    </div>
                   )}
                   {post.media_type === "video" && (
-                    <video controls className="rounded-lg">
-                      <source src={post.media_file} type="video/mp4" />
-                    </video>
+                    <div class="video-post">
+                      <video controls class="w-100">
+                        <source src={post.media_file} type="video/mp4" />
+                        Your browser does not support the video element.
+                      </video>
+                    </div>
                   )}
                   {post.media_type === "audio" && (
                     <audio controls>
