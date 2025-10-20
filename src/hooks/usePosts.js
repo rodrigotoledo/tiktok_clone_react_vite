@@ -5,8 +5,17 @@ export const usePosts = () => {
   return useQuery({
     queryKey: ['posts'],
     queryFn: async () => {
-      const response = await axios.get('/posts');
-      return response.data;
+      try {
+        const response = await axios.get('/posts');
+
+        console.log(response.data)
+        
+        return response.data?.posts || [];
+        
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+        return [];
+      }
     },
     keepPreviousData: true,
     refetchOnWindowFocus: true,

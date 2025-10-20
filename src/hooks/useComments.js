@@ -6,8 +6,16 @@ export const useComments = (postId) => {
   return useQuery({
     queryKey: ['comments', postId],
     queryFn: async () => {
-      const res = await axios.get(`/posts/${postId}/comments`);
-      return res.data;
+      try {
+        const response = await axios.get(`/posts/${postId}/comments`);
+
+        
+        return response.data?.comments || [];
+        
+      } catch (error) {
+        console.error('Error fetching comments:', error);
+        return [];
+      }
     },
     keepPreviousData: true,
     refetchOnWindowFocus: true,
