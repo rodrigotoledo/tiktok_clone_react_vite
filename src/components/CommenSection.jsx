@@ -50,9 +50,7 @@ const CommentsSection = ({ post }) => {
               key={c.id}
               className="p-2 bg-gray-700 text-white rounded-lg text-sm"
             >
-              <span className="font-bold text-fuchsia-400 mr-2">
-                {c.user.email_address}
-              </span>
+              <span className="font-bold text-fuchsia-400 mr-2">{c.user.email_address}:</span>
               {c.body}
             </div>
           ))}

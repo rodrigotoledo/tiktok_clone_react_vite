@@ -33,7 +33,6 @@ function SignUp({ setIsAuthenticated }) {
       setError('')
       navigate('/posts')
     } catch (err) {
-      console.log(err)
       setError(err.response?.data?.error || 'Sign up failed: please try again.')
       setNotice('')
     }
