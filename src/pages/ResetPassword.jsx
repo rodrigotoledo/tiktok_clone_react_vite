@@ -30,7 +30,6 @@ function ResetPassword() {
       setError('')
       setTimeout(() => navigate('/'), 1000) // Redirect to login after 2s
     } catch (err) {
-      console.error('Axios error:', err.response?.data, err.message)
       setError(err.response?.data?.error || `Password update failed: ${err.message}`)
       setNotice('')
     }

@@ -13,7 +13,6 @@ export const useComments = (postId) => {
         return response.data?.comments || [];
         
       } catch (error) {
-        console.error('Error fetching comments:', error);
         return [];
       }
     },

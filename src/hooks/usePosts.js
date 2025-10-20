@@ -7,13 +7,10 @@ export const usePosts = () => {
     queryFn: async () => {
       try {
         const response = await axios.get('/posts');
-
-        console.log(response.data)
         
         return response.data?.posts || [];
         
       } catch (error) {
-        console.error('Error fetching posts:', error);
         return [];
       }
     },
