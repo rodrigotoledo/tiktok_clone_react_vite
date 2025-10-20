@@ -28,7 +28,7 @@ function SignIn({ setIsAuthenticated }) {
       const { data } = await axios.post('/session', payload)
       
       localStorage.setItem('authToken', data.token);
-      localStorage.setItem('email_address', data.user.email_address);
+      localStorage.setItem('email_address', data.email_address);
       setIsAuthenticated(true);
       
       setNotice('Signed in successfully')
@@ -47,7 +47,7 @@ function SignIn({ setIsAuthenticated }) {
       {notice && <div className="mb-4 text-green-400">{notice}</div>}
       <div className="mb-4">
         <label htmlFor="email_address" className="block text-white mb-2">
-          Email Address
+          Email
         </label>
         <input
           type="email"

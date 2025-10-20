@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import AuthenticatedStack from './authentication/AuthenticatedStack';
 import UnauthenticatedStack from './authentication/UnauthenticatedStack';
 
@@ -13,7 +12,6 @@ const App = () => {
         const authToken = localStorage.getItem('authToken');
         setIsAuthenticated(!!authToken);
       } catch (error) {
-        console.log('Error:', error);
         setIsAuthenticated(false);
       }
     };
